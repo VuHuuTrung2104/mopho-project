@@ -7,17 +7,21 @@ export default function LoginPage() {
   const router = useRouter();
 
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isRegister, setIsRegister] = useState(false);
 
   const handleSubmit = () => {
     if (isRegister) {
-      alert("Đăng ký thành công (demo)");
+      alert("Tạo tài khoản thành công (demo)");
       setIsRegister(false);
+      setName("");
+      setEmail("");
+      setPassword("");
       return;
     }
 
-    // Demo admin
+    // demo login admin
     if (name === "admin" && password === "123") {
       localStorage.setItem(
         "user",
@@ -30,51 +34,88 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#faf7f2]">
-      <div className="w-[360px] bg-white p-6 rounded-xl shadow-md">
-        <h2 className="text-xl font-semibold text-center mb-4">
-          {isRegister ? "Đăng ký" : "Đăng nhập"}
+    <div className="min-h-screen flex items-center justify-center bg-[#faf7f2] px-4">
+      <div className="w-full max-w-sm bg-white p-6 rounded-xl shadow-md">
+        {/* ===== TITLE ===== */}
+        <h2 className="text-2xl font-semibold mb-1">
+          {isRegister ? "Tạo Tài Khoản" : "Đăng Nhập"}
         </h2>
+        <p className="text-sm text-gray-500 mb-4">
+          {isRegister
+            ? "Nhập thông tin của bạn"
+            : ""}
+        </p>
 
-        <label className="text-sm font-medium">Họ Tên</label>
+        {/* ===== NAME ===== */}
         <input
-          className="w-full mt-2 mb-4 px-3 py-2 border rounded-md"
-          placeholder="e.g. Nguyễn Cung"
+          className="w-full mb-3 px-3 py-2 border rounded-md text-sm"
+          placeholder="Tên đăng nhập"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
 
-        <label className="text-sm font-medium">Mật Khẩu</label>
+        {/* ===== EMAIL (REGISTER ONLY) ===== */}
+        {isRegister && (
+          <input
+            className="w-full mb-3 px-3 py-2 border rounded-md text-sm"
+            placeholder="Email hoặc Số Điện Thoại"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        )}
+
+        {/* ===== PASSWORD ===== */}
         <input
           type="password"
-          className="w-full mt-2 mb-4 px-3 py-2 border rounded-md"
-          placeholder="••••••••"
+          className="w-full mb-4 px-3 py-2 border rounded-md text-sm"
+          placeholder="Mật khẩu"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
+        {/* ===== SUBMIT ===== */}
         <button
-          onClick={handleSubmit}
-          className="w-full py-2 bg-blue-500 text-white rounded-md"
+        onClick={handleSubmit}
+        className={`w-full py-2 text-white rounded-md font-medium transition
+            ${isRegister
+            ? "bg-red-500 hover:bg-red-600"
+            : "bg-[#3b82f6] hover:bg-[#2563eb]"}
+        `}
         >
-          {isRegister ? "Đăng ký" : "Đăng nhập"}
+        {isRegister ? "Tạo Tài Khoản" : "Đăng nhập"}
         </button>
 
-        <p
-          className="mt-4 text-sm text-center text-blue-600 cursor-pointer"
-          onClick={() => setIsRegister(!isRegister)}
-        >
-          {isRegister
-            ? "Đã có tài khoản? Đăng nhập"
-            : "Bạn chưa có tài khoản? Đăng ký"}
-        </p>
 
+        {/* ===== GOOGLE ===== */}
         <button
-          className="w-full mt-3 py-2 border rounded-md flex justify-center gap-2 text-sm"
+          className="w-full mt-3 py-2 border rounded-md flex justify-center items-center gap-2 text-sm"
           onClick={() => alert("Google Login (demo)")}
         >
-          <span>G</span> Sign up with Google
+          <span className="font-bold text-lg">G</span>
+          Sign up with Google
         </button>
+
+        {/* ===== SWITCH MODE ===== */}
+        <p
+          className="mt-4 text-sm text-center cursor-pointer"
+          onClick={() => setIsRegister(!isRegister)}
+        >
+          {isRegister ? (
+            <>
+              Bạn đã có tài khoản?{" "}
+              <span className="text-blue-600 font-medium">
+                Đăng nhập
+              </span>
+            </>
+          ) : (
+            <>
+              Bạn chưa có tài khoản?{" "}
+              <span className="text-blue-600 font-medium">
+                Đăng ký
+              </span>
+            </>
+          )}
+        </p>
       </div>
     </div>
   );
