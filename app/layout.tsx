@@ -2,7 +2,7 @@ import './globals.css';
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-
+import Banner from "./components/Banner/TopBanner";
 export default function RootLayout({
   children,
 }: {
@@ -11,6 +11,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body>
+        <Banner />
         <Header />
         <main>{children}</main>
         <Footer />

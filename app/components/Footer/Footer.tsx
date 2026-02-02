@@ -23,7 +23,7 @@ export default function Footer() {
         {/* RIGHT */}
         <div className={styles.right}>
           <Image
-            src="/bacsi.png" 
+            src="/bacsitinhnguyen.png" 
             alt="Hội bác sỹ tình nguyện"
             width={200}
             height={200}

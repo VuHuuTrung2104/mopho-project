@@ -1,67 +1,68 @@
 .footer {
-  width: 100vw;
-  background: linear-gradient(to right, #f4c76d, #f1b24c);
-  padding-top: 48px;
+    width: 100vw;
+    background: linear-gradient(to right, #f4c76d, #f1b24c);
+    padding-top: 48px;
+
 }
 
 /* chỉ giới hạn NỘI DUNG */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
+    margin: 0 auto;
+    padding: 0 10px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /* LEFT */
 .left {
-  line-height: 1.8;
-
+    line-height: 1.8;
+    margin-left: 100px;
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 /* CENTER */
 .center {
-  text-align: center;
+    text-align: center;
 }
 
 .center h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 /* RIGHT */
 .right {
-  text-align: center;
+    text-align: center;
+    margin-right: 100px;
 }
 
 .slogan {
-  margin-top: 8px;
-  font-weight: 700;
-  color: #b91c1c;
+    margin-top: 8px;
+    font-weight: 700;
+    color: #b91c1c;
 }
 
 /* COPYRIGHT */
 .copyright {
-  margin-top: 48px;
-  padding: 14px 0;
-  text-align: center;
-  font-size: 13px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 48px;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 /* MOBILE */
 @media (max-width: 900px) {
   .container {
-    flex-direction: column;
-    gap: 32px;
-    text-align: center;
+      flex-direction: column;
+      gap: 32px;
+      text-align: center;
   }
 }
