@@ -5,8 +5,6 @@ export default function HomePage() {
       <section className="relative mt-4 px-10">
         <div className="relative rounded-xl overflow-hidden">
           <img
-            src="/banner.jpg"
-            alt="Mơ Phố"
             className="w-full h-[380px] object-cover"
           />
 

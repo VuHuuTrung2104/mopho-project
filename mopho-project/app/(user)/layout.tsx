@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -33,15 +35,15 @@ export default function UserLayout({
             <h1 className="font-semibold text-xl">Mơ Phố</h1>
 
             {/* MENU */}
-            <nav className="flex gap-6 text-sm">
-            <a href="/">Trang chủ</a>
-            <a href="/cafe">Cafe</a>
-            <a href="/books">Sách</a>
-            <a href="/gift">Đồ cũ</a>
-            <a href="/health">Sức khỏe</a>
-            <a href="/education">Khóa học</a>
-            <a href="/music">Âm nhạc</a>
-            </nav>
+          <nav className="flex gap-6 text-sm">
+            <Link href="/">Trang chủ</Link>
+            <Link href="/cafe">Cafe</Link>
+            <Link href="/books">Sách</Link>
+            <Link href="/2hand">Đồ cũ</Link>
+            <Link href="/health">Sức khỏe</Link>
+            <Link href="/education">Khóa học</Link>
+            <Link href="/music">Âm nhạc</Link>
+          </nav>
 
             {/* ICON ACTIONS */}
             <div className="flex gap-5 items-center relative">
