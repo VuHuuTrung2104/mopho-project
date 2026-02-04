@@ -6,13 +6,23 @@ import Link from 'next/link';
 import { FiHeart, FiShoppingCart, FiUser } from 'react-icons/fi';
 import { usePathname } from 'next/navigation';
 
+import { Sriracha } from "next/font/google";
+
+export const logoFont = Sriracha({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400"], 
+});
+
 export default function Header() {
   const pathname = usePathname();
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
+        <Link
+          href="/"
+          className={`${styles.logo} ${logoFont.className}`}
+        >
           Mơ Phố
         </Link>
 
