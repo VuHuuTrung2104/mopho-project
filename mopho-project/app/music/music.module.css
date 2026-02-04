@@ -1,0 +1,114 @@
+.container {
+  padding: 40px 80px;
+  font-family: serif;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(to right, #f7d9a8, #f3c77c);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.banner h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Heading */
+.heading {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Grid card */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Info */
+.info {
+  padding: 18px;
+}
+
+.info h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.info p {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.play {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #e6b566;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.like {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #aaa;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.play:hover {
+  background: #d89f42;
+}
+
+.like:hover {
+  background: #f3f3f3;
+}
+
+/* More section */
+.more {
+  margin-top: 60px;
+  padding: 30px;
+  border-radius: 18px;
+  background: #faf3e3;
+  text-align: center;
+}

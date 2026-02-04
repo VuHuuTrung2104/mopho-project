@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Banner from "./components/Banner/TopBanner";
-
+import ClientWrapper from "./components/ClientWrapper";
 
 
 
@@ -26,18 +26,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><Banner />
-        <Header />
-        {children}
-        <Footer />
-
+    <html lang="vi">
+      <body>
+        {/* ✅ Chỉ render Header khi là user */}
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );
